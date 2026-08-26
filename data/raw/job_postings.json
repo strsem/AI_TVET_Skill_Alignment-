@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Python Developer",
+    "company": "Company A",
+    "skills": [
+      "Python",
+      "Django",
+      "REST API",
+      "Git",
+      "SQL"
+    ],
+    "experience": "2-3 years"
+  },
+  {
+    "title": "Junior Data Analyst",
+    "company": "Company B",
+    "skills": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "SQL",
+      "Data Visualization"
+    ],
+    "experience": "1-2 years"
+  },
+  {
+    "title": "Machine Learning Engineer",
+    "company": "Company C",
+    "skills": [
+      "Python",
+      "Scikit-learn",
+      "PyTorch",
+      "Machine Learning",
+      "Data Preprocessing"
+    ],
+    "experience": "2-4 years"
+  },
+  {
+    "title": "AI Developer",
+    "company": "Company D",
+    "skills": [
+      "Python",
+      "LLM",
+      "Generative AI",
+      "LangChain",
+      "APIs",
+      "Machine Learning"
+    ],
+    "experience": "2-5 years"
+  }
+]
