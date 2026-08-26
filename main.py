@@ -1,50 +1,60 @@
 import pandas as pd
-from src.data.loader import load_job_postings
+from src.skills.job_skill_matrix import create_job_skill_matrix
 
-# 1. Load job postings
+from src.data.loader import load_job_postings
+from src.skills.skill_analysis import analyze_skill_importance
+
+
+# -------------------------
+# 1. Load Job Postings
+# -------------------------
+
 file_path = "data/raw/job_postings.json"
 
 jobs = load_job_postings(file_path)
 
 print("Number of jobs:", len(jobs))
 
+
+# -------------------------
 # 2. Create DataFrame
+# -------------------------
+
 df = pd.DataFrame([
     {
         "title": job.title,
         "company": job.company,
-        "skills": job.skills,
+        "required_skills": job.required_skills,
+        "preferred_skills": job.preferred_skills,
         "experience": job.experience
     }
     for job in jobs
 ])
-print("\nDataFrame:")
-print(df)
 
-# 3. Count skill frequency
 
-skill_counts = {}
+print("\nJob DataFrame:")
+print(df.to_string(index=False))
 
-for skills in df["skills"]:
-    for skill in skills:
 
-        skill_counts[skill] = skill_counts.get(skill, 0) + 1
+# -------------------------
+# 3. Skill Importance
+# -------------------------
 
-# 4. Create Skill DataFrame
+skill_df = analyze_skill_importance(df)
 
-skill_df = pd.DataFrame(
-    list(skill_counts.items()),
-    columns=["skill", "job_count"]
+
+print("\nSkill Importance:")
+print(
+    skill_df.to_string(index=False)
 )
 
+# -------------------------
+# 4. Job × Skill Matrix
+# -------------------------
 
-# 5. Sort by frequency
+job_skill_df = create_job_skill_matrix(df)
 
-skill_df = skill_df.sort_values(
-    by="job_count",
-    ascending=False
-).reset_index(drop=True)
-
-
-print("\nSkill Demand:")
-print(skill_df)
+print("\nJob × Skill:")
+print(
+    job_skill_df.to_string(index=False)
+)

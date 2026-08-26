@@ -5,5 +5,6 @@ from dataclasses import dataclass
 class JobPosting:
     title: str
     company: str
-    skills: list[str]
+    required_skills: list[str]
+    preferred_skills: list[str]
     experience: str = ""

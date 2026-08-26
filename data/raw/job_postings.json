@@ -2,23 +2,26 @@
   {
     "title": "Python Developer",
     "company": "Company A",
-    "skills": [
+    "required_skills": [
       "Python",
       "Django",
       "REST API",
       "Git",
       "SQL"
     ],
+    "preferred_skills": [],
     "experience": "2-3 years"
   },
   {
     "title": "Junior Data Analyst",
     "company": "Company B",
-    "skills": [
+    "required_skills": [
       "Python",
       "Pandas",
       "NumPy",
-      "SQL",
+      "SQL"
+    ],
+    "preferred_skills": [
       "Data Visualization"
     ],
     "experience": "1-2 years"
@@ -26,25 +29,28 @@
   {
     "title": "Machine Learning Engineer",
     "company": "Company C",
-    "skills": [
+    "required_skills": [
       "Python",
       "Scikit-learn",
       "PyTorch",
       "Machine Learning",
       "Data Preprocessing"
     ],
+    "preferred_skills": [],
     "experience": "2-4 years"
   },
   {
     "title": "AI Developer",
     "company": "Company D",
-    "skills": [
+    "required_skills": [
       "Python",
       "LLM",
       "Generative AI",
-      "LangChain",
-      "APIs",
       "Machine Learning"
+    ],
+    "preferred_skills": [
+      "LangChain",
+      "APIs"
     ],
     "experience": "2-5 years"
   }
