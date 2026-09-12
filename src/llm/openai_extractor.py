@@ -8,7 +8,7 @@ from src.llm.base import SkillExtractor
 
 class OpenAISkillExtractor(SkillExtractor):
 
-    def init(self):
+    def __init__(self):
 
         # Load environment variables
         load_dotenv()
