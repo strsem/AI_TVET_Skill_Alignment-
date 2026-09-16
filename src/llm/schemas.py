@@ -1,8 +1,25 @@
-from dataclasses import dataclass
+from typing import Literal
+from pydantic import BaseModel
 
+class ExtractedSkill(BaseModel):
 
-@dataclass
-class ExtractedSkill:
     skill: str
-    importance: str
+    category: str
+
+    importance: Literal[
+        "Required",
+        "Preferred"
+    ]
+
+    proficiency: Literal[
+        "Advanced",
+        "Intermediate",
+        "Beginner",
+        "Not specified"
+    ]
+
     evidence: str
+
+class SkillExtractionResult(BaseModel):
+
+    skills: list[ExtractedSkill]
