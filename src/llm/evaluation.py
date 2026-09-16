@@ -1,15 +1,12 @@
 from src.llm.schemas import SkillExtractionResult
 
-
 def evaluate_extraction(result: SkillExtractionResult) -> None:
     """
     Print a simple report about the extracted skills.
     """
 
     print("\n")
-    print("=" * 90)
     print("LLM EXTRACTION EVALUATION")
-    print("=" * 90)
 
     print(f"Total extracted skills: {len(result.skills)}")
 
@@ -19,7 +16,6 @@ def evaluate_extraction(result: SkillExtractionResult) -> None:
     preferred_count = 0
 
     for skill in result.skills:
-
         if skill.importance == "Required":
             required_count += 1
 

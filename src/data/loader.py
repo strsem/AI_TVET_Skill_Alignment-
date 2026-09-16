@@ -1,5 +1,5 @@
 import json
-from .models import JobPosting
+from models import JobPosting
 
 
 def load_job_postings(file_path: str) -> list[JobPosting]:

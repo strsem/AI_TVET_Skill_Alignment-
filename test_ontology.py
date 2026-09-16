@@ -11,9 +11,7 @@ from src.skills.requirement_logic import (
 # Test 1
 skill = get_skill_concept("python")
 
-print("=" * 60)
 print("SKILL ONTOLOGY")
-print("=" * 60)
 print("Skill ID:", skill.skill_id)
 print("Canonical Name:", skill.canonical_name)
 print("Category:", skill.category)
@@ -41,7 +39,6 @@ print(
 # Test 3
 print("\n" + "=" * 60)
 print("PARENT SKILL")
-print("=" * 60)
 
 print(
     "Transformer parent:",
