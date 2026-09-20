@@ -7,9 +7,7 @@ def evaluate_extraction(result: SkillExtractionResult) -> None:
 
     print("\n")
     print("LLM EXTRACTION EVALUATION")
-
     print(f"Total extracted skills: {len(result.skills)}")
-
     print("\nSkills by importance:")
 
     required_count = 0

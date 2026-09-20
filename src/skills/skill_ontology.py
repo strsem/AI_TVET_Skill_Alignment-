@@ -224,3 +224,20 @@ def get_parent_skill(skill_name: str) -> Optional[str]:
     if concept is None:
         return None
     return concept.parent_skill
+
+from dataclasses import dataclass, field
+
+
+@dataclass
+class Skill:
+    name: str
+    category: str
+    parent: str | None = None
+    aliases: list[str] = field(default_factory=list)
+
+
+@dataclass
+class Requirement:
+    skills: list[str]
+    logic: str = "AND"
+    importance: str = "Required"
