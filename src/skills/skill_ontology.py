@@ -1,25 +1,28 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 
+
 @dataclass
 class SkillConcept:
     skill_id: str
     canonical_name: str
-
     aliases: List[str] = field(default_factory=list)
     category: Optional[str] = None
     parent_skill: Optional[str] = None
     child_skills: List[str] = field(default_factory=list)
     related_skills: List[str] = field(default_factory=list)
 
-# Skill Ontology
+
 SKILL_ONTOLOGY = {
+
     "python": SkillConcept(
         skill_id="SKILL_001",
         canonical_name="Python",
         aliases=[
             "python",
-            "python programming"
+            "python programming",
+            "python developer",
+            "python language"
         ],
         category="Programming Language"
     ),
@@ -48,18 +51,14 @@ SKILL_ONTOLOGY = {
     "tensorflow": SkillConcept(
         skill_id="SKILL_004",
         canonical_name="TensorFlow",
-        aliases=[
-            "tensorflow"
-        ],
+        aliases=["tensorflow"],
         category="Machine Learning"
     ),
 
     "pytorch": SkillConcept(
         skill_id="SKILL_005",
         canonical_name="PyTorch",
-        aliases=[
-            "pytorch"
-        ],
+        aliases=["pytorch"],
         category="Machine Learning"
     ),
 
@@ -92,9 +91,7 @@ SKILL_ONTOLOGY = {
     "bert": SkillConcept(
         skill_id="SKILL_008",
         canonical_name="BERT",
-        aliases=[
-            "bert"
-        ],
+        aliases=["bert"],
         category="NLP",
         parent_skill="Natural Language Processing"
     ),
@@ -124,7 +121,8 @@ SKILL_ONTOLOGY = {
         skill_id="SKILL_011",
         canonical_name="FastAPI",
         aliases=[
-            "fastapi"
+            "fastapi",
+            "fast api"
         ],
         category="Web Development"
     ),
@@ -154,20 +152,17 @@ SKILL_ONTOLOGY = {
     "neo4j": SkillConcept(
         skill_id="SKILL_014",
         canonical_name="Neo4j",
-        aliases=[
-            "neo4j"
-        ],
+        aliases=["neo4j"],
         category="Graph Database"
     ),
 
     "cypher": SkillConcept(
         skill_id="SKILL_015",
         canonical_name="Cypher",
-        aliases=[
-            "cypher"
-        ],
+        aliases=["cypher"],
         category="Query Language"
     ),
+
 "microservices": SkillConcept(
         skill_id="SKILL_016",
         canonical_name="Microservices",
@@ -177,6 +172,7 @@ SKILL_ONTOLOGY = {
         ],
         category="Software Architecture"
     ),
+
     "ci_cd": SkillConcept(
         skill_id="SKILL_017",
         canonical_name="CI/CD",
@@ -188,56 +184,62 @@ SKILL_ONTOLOGY = {
         ],
         category="DevOps"
     ),
+
     "devops": SkillConcept(
         skill_id="SKILL_018",
         canonical_name="DevOps",
-        aliases=[
-            "devops"
-        ],
+        aliases=["devops"],
         category="DevOps"
     )
 }
 
-# Lookup
+
 def get_skill_concept(skill_name: str) -> Optional[SkillConcept]:
     normalized_name = skill_name.strip().lower()
+
     for concept in SKILL_ONTOLOGY.values():
+
         if normalized_name == concept.canonical_name.lower():
             return concept
 
         for alias in concept.aliases:
             if normalized_name == alias.lower():
                 return concept
+
     return None
 
 
-# Get canonical skill name
 def get_canonical_name(skill_name: str) -> str:
     concept = get_skill_concept(skill_name)
+
     if concept is None:
-        return skill_name
+        return skill_name.strip()
+
     return concept.canonical_name
 
-# Get parent skill
+
 def get_parent_skill(skill_name: str) -> Optional[str]:
     concept = get_skill_concept(skill_name)
+
     if concept is None:
         return None
+
     return concept.parent_skill
 
-from dataclasses import dataclass, field
+
+def get_child_skills(skill_name: str) -> List[str]:
+    concept = get_skill_concept(skill_name)
+
+    if concept is None:
+        return []
+
+    return concept.child_skills
 
 
-@dataclass
-class Skill:
-    name: str
-    category: str
-    parent: str | None = None
-    aliases: list[str] = field(default_factory=list)
+def get_skill_category(skill_name: str) -> Optional[str]:
+    concept = get_skill_concept(skill_name)
 
+    if concept is None:
+        return None
 
-@dataclass
-class Requirement:
-    skills: list[str]
-    logic: str = "AND"
-    importance: str = "Required"
+    return concept.category

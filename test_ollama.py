@@ -75,12 +75,10 @@ result = extractor.extract(job_description)
 
 
 # 2. نمایش خروجی خام LLM
-
 print("\n")
 print("LLM EXTRACTION")
 print(f"\nTotal extracted skills: {len(result.skills)}")
 for skill in result.skills:
-
     print(
         f"\nSkill        : {skill.skill}"
         f"\nCategory     : {skill.category}"
@@ -117,10 +115,7 @@ preferred_count = sum(
 )
 
 print("\n")
-print("=" * 100)
 print("SUMMARY")
-print("=" * 100)
-
 print(f"Required skills : {required_count}")
 print(f"Preferred skills: {preferred_count}")
 print(f"Total skills    : {len(normalized_skills)}")

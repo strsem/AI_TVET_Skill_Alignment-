@@ -1,31 +1,19 @@
-from src.skills.skill_ontology import Requirement
+from src.skills.requirement_logic import (
+    RequirementGroup,
+    create_requirement
+)
 
 
-def create_requirement(
+def parse_requirement(
+    requirement_id: str,
     skills: list[str],
     logic: str = "AND",
-    importance: str = "Required"
-) -> Requirement:
+    category: str = "General"
+) -> RequirementGroup:
 
-    if logic not in {"AND", "OR"}:
-        raise ValueError("logic must be AND or OR")
-
-    return Requirement(
+    return create_requirement(
+        requirement_id=requirement_id,
         skills=skills,
         logic=logic,
-        importance=importance
-    )
-
-
-def requirement_to_text(requirement: Requirement) -> str:
-
-    operator = f" {requirement.logic} "
-
-    skills_text = operator.join(
-        requirement.skills
-    )
-
-    return (
-        f"{skills_text} "
-        f"({requirement.importance})"
+        category=category
     )

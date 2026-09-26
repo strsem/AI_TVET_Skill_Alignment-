@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from typing import List
 
+
 @dataclass
 class RequirementGroup:
     requirement_id: str
@@ -9,14 +10,18 @@ class RequirementGroup:
     category: str
     description: str
 
-# Create OR requirement
+
 def create_or_requirement(
     requirement_id: str,
     skills: List[str],
-    category: str = "Alternative",
+    category: str = "Alternative"
 ) -> RequirementGroup:
 
+    if not skills:
+        raise ValueError("skills cannot be empty")
+
     description = "At least one of: " + ", ".join(skills)
+
     return RequirementGroup(
         requirement_id=requirement_id,
         logic="OR",
@@ -25,14 +30,18 @@ def create_or_requirement(
         description=description
     )
 
-# Create AND requirement
+
 def create_and_requirement(
     requirement_id: str,
     skills: List[str],
-    category: str = "Combined",
+    category: str = "Combined"
 ) -> RequirementGroup:
 
+    if not skills:
+        raise ValueError("skills cannot be empty")
+
     description = "All of: " + ", ".join(skills)
+
     return RequirementGroup(
         requirement_id=requirement_id,
         logic="AND",
@@ -41,43 +50,33 @@ def create_and_requirement(
         description=description
     )
 
-# Example requirements
-REQUIREMENT_GROUPS = [
 
-    create_or_requirement(
-        requirement_id="REQ_001",
-        skills=[
-            "TensorFlow",
-            "PyTorch"
-        ],
-        category="Deep Learning Framework"
-    ),
+def requirement_to_text(requirement: RequirementGroup) -> str:
 
-    create_and_requirement(
-        requirement_id="REQ_002",
-        skills=[
-            "Web Service",
-            "FastAPI"
-        ],
-        category="Backend Development"
-    ),
+    operator = f" {requirement.logic} "
 
-    create_and_requirement(
-        requirement_id="REQ_003",
-        skills=[
-            "Transformer",
-            "BERT",
-            "GPT"
-        ],
-        category="NLP"
-    )
-]
+    return operator.join(requirement.skills)
 
-# Print requirements
-def print_requirements():
-    for requirement in REQUIREMENT_GROUPS:
-        print("\nRequirement:", requirement.requirement_id)
-        print("Logic:", requirement.logic)
-        print("Skills:", requirement.skills)
-        print("Category:", requirement.category)
-        print("Description:", requirement.description)
+
+def create_requirement(
+    requirement_id: str,
+    skills: List[str],
+    logic: str = "AND",
+    category: str = "General"
+) -> RequirementGroup:
+
+    if logic == "AND":
+        return create_and_requirement(
+            requirement_id=requirement_id,
+            skills=skills,
+            category=category
+        )
+
+    if logic == "OR":
+        return create_or_requirement(
+            requirement_id=requirement_id,
+            skills=skills,
+            category=category
+        )
+
+    raise ValueError("logic must be AND or OR")

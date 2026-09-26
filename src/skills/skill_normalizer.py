@@ -150,3 +150,15 @@ def normalize_skill(skill: str) -> str:
     }
 
     return skill_aliases.get(skill, skill.title())
+
+
+
+from src.skills.skill_ontology import get_canonical_name
+def normalize_skill(skill: str) -> str:
+    """
+    Convert a skill name into its canonical ontology name.
+    """
+    if not skill:
+        return ""
+
+    return get_canonical_name(skill)
