@@ -190,6 +190,40 @@ SKILL_ONTOLOGY = {
         canonical_name="DevOps",
         aliases=["devops"],
         category="DevOps"
+    ),
+
+    "machine_learning": SkillConcept(
+        skill_id="SKILL_019",
+        canonical_name="Machine Learning",
+        aliases=[
+            "machine learning",
+            "ml",
+            "machine learning algorithms"
+        ],
+        category="Machine Learning"
+    ),
+
+    "rest_api": SkillConcept(
+        skill_id="SKILL_020",
+        canonical_name="REST API",
+        aliases=[
+            "rest api",
+            "rest apis",
+            "restful api",
+            "restful apis"
+        ],
+        category="Web Development"
+    ),
+
+    "llm": SkillConcept(
+        skill_id="SKILL_021",
+        canonical_name="LLM",
+        aliases=[
+            "llm",
+            "large language model",
+            "large language models"
+        ],
+        category="Artificial Intelligence"
     )
 }
 

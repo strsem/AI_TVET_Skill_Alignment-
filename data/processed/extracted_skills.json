@@ -1,0 +1,174 @@
+{
+  "job_id": "arousha_001",
+  "skills": [
+    {
+      "skill": "Python",
+      "category": "Programming Language",
+      "importance": "Required",
+      "proficiency": "Advanced",
+      "evidence": "Python پیشرفته"
+    },
+    {
+      "skill": "GIT",
+      "category": "Version Control",
+      "importance": "Required",
+      "proficiency": "Intermediate",
+      "evidence": "GIT متوسط"
+    },
+    {
+      "skill": "Docker",
+      "category": "DevOps",
+      "importance": "Required",
+      "proficiency": "Beginner",
+      "evidence": "Docker مقدماتی"
+    },
+    {
+      "skill": "English",
+      "category": "Language",
+      "importance": "Required",
+      "proficiency": "Intermediate",
+      "evidence": "زبان انگلیسی متوسط"
+    },
+    {
+      "skill": "TensorFlow or PyTorch",
+      "category": "Machine Learning",
+      "importance": "Required",
+      "proficiency": "Not specified",
+      "evidence": "TensorFlow یا PyTorch"
+    },
+    {
+      "skill": "Hugging Face Transformers",
+      "category": "NLP / Deep Learning",
+      "importance": "Required",
+      "proficiency": "Not specified",
+      "evidence": "Hugging Face Transformers"
+    },
+    {
+      "skill": "Deep knowledge of NLP algorithms such as Transformer, BERT, and GPT",
+      "category": "Artificial Intelligence",
+      "importance": "Required",
+      "proficiency": "Not specified",
+      "evidence": "Deep knowledge of NLP algorithms such as Transformer, BERT, and GPT"
+    },
+    {
+      "skill": "Problem-solving and logical thinking",
+      "category": "Professional Competency",
+      "importance": "Required",
+      "proficiency": "Not specified",
+      "evidence": "Problem-solving and logical thinking"
+    },
+    {
+      "skill": "Teamwork and Agile methods",
+      "category": "Professional Competency",
+      "importance": "Required",
+      "proficiency": "Not specified",
+      "evidence": "Teamwork and Agile methods"
+    },
+    {
+      "skill": "Processing large volumes of text data",
+      "category": "Data Processing",
+      "importance": "Required",
+      "proficiency": "Not specified",
+      "evidence": "Processing large volumes of text data"
+    },
+    {
+      "skill": "Understanding complex business problems and presenting data-driven solutions",
+      "category": "Professional Competency",
+      "importance": "Required",
+      "proficiency": "Not specified",
+      "evidence": "Understanding complex business problems and presenting data-driven solutions"
+    },
+    {
+      "skill": "Web Service and FastAPI",
+      "category": "Web Development",
+      "importance": "Required",
+      "proficiency": "Not specified",
+      "evidence": "Web Service and FastAPI"
+    },
+    {
+      "skill": "Semantic Search",
+      "category": "Information Retrieval",
+      "importance": "Preferred",
+      "proficiency": "Not specified",
+      "evidence": "Semantic Search"
+    },
+    {
+      "skill": "RAG",
+      "category": "Generative AI",
+      "importance": "Preferred",
+      "proficiency": "Not specified",
+      "evidence": "RAG"
+    },
+    {
+      "skill": "Vector Database",
+      "category": "Database",
+      "importance": "Preferred",
+      "proficiency": "Not specified",
+      "evidence": "Vector Database"
+    },
+    {
+      "skill": "Document Database",
+      "category": "Database",
+      "importance": "Preferred",
+      "proficiency": "Not specified",
+      "evidence": "Document Database"
+    },
+    {
+      "skill": "Neo4j",
+      "category": "Graph Database",
+      "importance": "Preferred",
+      "proficiency": "Not specified",
+      "evidence": "Neo4j"
+    },
+    {
+      "skill": "Cypher",
+      "category": "Query Language",
+      "importance": "Preferred",
+      "proficiency": "Not specified",
+      "evidence": "Cypher"
+    },
+    {
+      "skill": "Distributed Systems",
+      "category": "Software Architecture",
+
+"importance": "Preferred",
+      "proficiency": "Not specified",
+      "evidence": "Distributed Systems"
+    },
+    {
+      "skill": "Microservices",
+      "category": "Software Architecture",
+      "importance": "Preferred",
+      "proficiency": "Not specified",
+      "evidence": "Microservices"
+    },
+    {
+      "skill": "Messaging",
+      "category": "Software Architecture",
+      "importance": "Preferred",
+      "proficiency": "Not specified",
+      "evidence": "Messaging"
+    },
+    {
+      "skill": "Git",
+      "category": "Version Control",
+      "importance": "Preferred",
+      "proficiency": "Not specified",
+      "evidence": "Git"
+    },
+    {
+      "skill": "CI/CD",
+      "category": "DevOps",
+      "importance": "Preferred",
+      "proficiency": "Not specified",
+      "evidence": "CI/CD"
+    },
+    {
+      "skill": "DevOps",
+      "category": "DevOps",
+      "importance": "Preferred",
+      "proficiency": "Not specified",
+      "evidence": "DevOps"
+    }
+  ]
+}

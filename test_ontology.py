@@ -1,57 +1,65 @@
 from src.skills.skill_ontology import (
     get_skill_concept,
     get_canonical_name,
-    get_parent_skill
+    get_parent_skill,
+    get_child_skills,
+    get_skill_category
 )
 
-from src.skills.requirement_logic import (
-    print_requirements
-)
 
-# Test 1
-skill = get_skill_concept("python")
+def test_python_canonical_name():
 
-print("SKILL ONTOLOGY")
-print("Skill ID:", skill.skill_id)
-print("Canonical Name:", skill.canonical_name)
-print("Category:", skill.category)
-print("Aliases:", skill.aliases)
+    assert get_canonical_name("python") == "Python"
 
 
-# Test 2
-print("\n" + "=" * 60)
-print("CANONICAL NAME")
-print("=" * 60)
+def test_python_alias():
 
-print(
-    "GIT ->",
-    get_canonical_name("GIT")
-)
-print(
-    "python ->",
-    get_canonical_name("python")
-)
-print(
-    "vector db ->",
-    get_canonical_name("vector db")
-)
+    assert get_canonical_name("python programming") == "Python"
 
-# Test 3
-print("\n" + "=" * 60)
-print("PARENT SKILL")
 
-print(
-    "Transformer parent:",
-    get_parent_skill("Transformer")
-)
+def test_git_alias():
 
-print(
-    "BERT parent:",
-    get_parent_skill("BERT")
-)
+    assert get_canonical_name("git version control") == "Git"
 
-# Test 4
-print("REQUIREMENT LOGIC")
-print("=" * 60)
 
-print_requirements()
+def test_tensorflow():
+
+    assert get_canonical_name("tensorflow") == "TensorFlow"
+
+
+def test_pytorch():
+
+    assert get_canonical_name("pytorch") == "PyTorch"
+
+
+def test_nlp_canonical_name():
+
+    assert get_canonical_name("nlp") == "Natural Language Processing"
+
+
+def test_transformer_parent():
+
+    assert get_parent_skill("Transformer") == (
+        "Natural Language Processing"
+    )
+
+
+def test_nlp_children():
+
+    children = get_child_skills("NLP")
+
+    assert "Transformer" in children
+    assert "BERT" in children
+    assert "GPT" in children
+
+
+def test_skill_category():
+
+    assert get_skill_category("Python") == (
+        "Programming Language"
+    )
+
+
+def test_unknown_skill():
+
+    assert get_canonical_name("SQL") == "SQL"
