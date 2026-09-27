@@ -24,9 +24,7 @@ def calculate_market_skill_profile(
         canonical_skills = set()
 
         for skill in job:
-
             canonical_skill = get_canonical_name(skill)
-
             canonical_skills.add(canonical_skill)
 
         for skill in canonical_skills:
@@ -35,7 +33,6 @@ def calculate_market_skill_profile(
     market_profile = {}
 
     for skill, job_count in skill_job_count.items():
-
         market_coverage = (
             job_count / total_jobs
         ) * 100
@@ -94,3 +91,38 @@ def print_market_skill_profile(
             "Market Coverage :",
             f"{data['market_coverage']}%"
         )
+
+
+
+from src.llm.schemas import SkillExtractionResult
+from src.skills.normalized_skills import normalize_extracted_skills
+
+
+def calculate_market_skill_profile_from_extractions(
+    extraction_results: List[SkillExtractionResult]
+) -> Dict[str, Dict]:
+    """
+    Calculate market skill demand from multiple LLM extraction results.
+
+    Each extraction result represents one job posting.
+    Skills are normalized before calculating market coverage.
+    """
+
+    jobs = []
+
+    for result in extraction_results:
+
+        normalized_skills = normalize_extracted_skills(
+            result
+        )
+
+        job_skills = [
+            skill["skill"]
+            for skill in normalized_skills
+        ]
+
+        jobs.append(job_skills)
+
+    return calculate_market_skill_profile(
+        jobs
+    )
