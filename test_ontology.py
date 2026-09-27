@@ -8,44 +8,36 @@ from src.skills.skill_ontology import (
 
 
 def test_python_canonical_name():
-
     assert get_canonical_name("python") == "Python"
 
 
 def test_python_alias():
-
     assert get_canonical_name("python programming") == "Python"
 
 
 def test_git_alias():
-
     assert get_canonical_name("git version control") == "Git"
 
 
 def test_tensorflow():
-
     assert get_canonical_name("tensorflow") == "TensorFlow"
 
 
 def test_pytorch():
-
     assert get_canonical_name("pytorch") == "PyTorch"
 
 
 def test_nlp_canonical_name():
-
     assert get_canonical_name("nlp") == "Natural Language Processing"
 
 
 def test_transformer_parent():
-
     assert get_parent_skill("Transformer") == (
         "Natural Language Processing"
     )
 
 
 def test_nlp_children():
-
     children = get_child_skills("NLP")
 
     assert "Transformer" in children
@@ -54,12 +46,39 @@ def test_nlp_children():
 
 
 def test_skill_category():
-
     assert get_skill_category("Python") == (
         "Programming Language"
     )
 
 
 def test_unknown_skill():
-
     assert get_canonical_name("SQL") == "SQL"
+
+
+
+def test_high_proficiency_python():
+
+    assert get_canonical_name(
+        "High proficiency in Python"
+    ) == "Python"
+
+
+def test_python_persian():
+
+    assert get_canonical_name(
+        "تسلط حرفه‌ای به Python"
+    ) == "Python"
+
+
+def test_llm_experience_phrase():
+
+    assert get_canonical_name(
+        "Practical experience in developing systems or products based on LLM"
+    ) == "LLM"
+
+
+def test_ai_agents_phrase():
+
+    assert get_canonical_name(
+        "Experience in designing and developing AI Agents and Agentic Systems"
+    ) == "AI Agents"

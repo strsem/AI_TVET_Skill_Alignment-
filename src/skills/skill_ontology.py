@@ -1,3 +1,4 @@
+import re
 from dataclasses import dataclass, field
 from typing import List, Optional
 
@@ -224,23 +225,271 @@ SKILL_ONTOLOGY = {
             "large language models"
         ],
         category="Artificial Intelligence"
-    )
+    ),
+"ai_agents": SkillConcept(
+        skill_id="SKILL_022",
+        canonical_name="AI Agents",
+        aliases=[
+            "ai agent",
+            "ai agents",
+            "agentic ai",
+            "agentic systems",
+            "agentic system"
+        ],
+        category="Artificial Intelligence"
+    ),
+
+    "function_calling": SkillConcept(
+        skill_id="SKILL_023",
+        canonical_name="Function Calling",
+        aliases=[
+            "function calling"
+        ],
+        category="Generative AI"
+    ),
+
+    "tool_calling": SkillConcept(
+        skill_id="SKILL_024",
+        canonical_name="Tool Calling",
+        aliases=[
+            "tool calling"
+        ],
+        category="Generative AI"
+    ),
+
+    "embeddings": SkillConcept(
+        skill_id="SKILL_025",
+        canonical_name="Embeddings",
+        aliases=[
+            "embedding",
+            "embeddings"
+        ],
+        category="Generative AI"
+    ),
+
+    "postgresql": SkillConcept(
+        skill_id="SKILL_026",
+        canonical_name="PostgreSQL",
+        aliases=[
+            "postgresql",
+            "postgres"
+        ],
+        category="Database"
+    ),
+
+    "linux": SkillConcept(
+        skill_id="SKILL_027",
+        canonical_name="Linux",
+        aliases=[
+            "linux"
+        ],
+        category="Operating System"
+    ),
+
+    "langchain": SkillConcept(
+        skill_id="SKILL_028",
+        canonical_name="LangChain",
+        aliases=[
+            "langchain"
+        ],
+        category="AI Framework"
+    ),
+
+    "langgraph": SkillConcept(
+        skill_id="SKILL_029",
+        canonical_name="LangGraph",
+        aliases=[
+            "langgraph"
+        ],
+        category="AI Framework"
+    ),
+
+    "mcp": SkillConcept(
+        skill_id="SKILL_030",
+        canonical_name="MCP",
+        aliases=[
+            "mcp",
+            "model context protocol"
+        ],
+        category="AI Infrastructure"
+    ),
+
+    "redis": SkillConcept(
+        skill_id="SKILL_031",
+        canonical_name="Redis",
+        aliases=[
+            "redis"
+        ],
+        category="Database"
+    ),
+
+    "n8n": SkillConcept(
+        skill_id="SKILL_032",
+        canonical_name="n8n",
+        aliases=[
+            "n8n"
+        ],
+        category="Automation"
+    ),
+
+    "prompt_engineering": SkillConcept(
+        skill_id="SKILL_033",
+        canonical_name="Prompt Engineering",
+        aliases=[
+            "prompt engineering"
+        ],
+        category="Generative AI"
+    ),
+
+    "context_engineering": SkillConcept(
+        skill_id="SKILL_034",
+        canonical_name="Context Engineering",
+        aliases=[
+            "context engineering",
+            "context management"
+        ],
+        category="Generative AI"
+    ),
+
+
+
+
+"ai_agents": SkillConcept(
+        skill_id="SKILL_022",
+        canonical_name="AI Agents",
+        aliases=[
+            "ai agent",
+            "ai agents",
+            "agentic ai",
+            "agentic systems",
+            "agentic system",
+            "ai agent systems"
+        ],
+        category="Artificial Intelligence"
+    ),
+
+    "context_generation": SkillConcept(
+        skill_id="SKILL_023",
+        canonical_name="Context Generation",
+        aliases=[
+            "context generation",
+            "context generation for llm"
+        ],
+        category="Generative AI"
+    ),
+
+    "tool_integration": SkillConcept(
+        skill_id="SKILL_024",
+        canonical_name="Tool Integration",
+        aliases=[
+            "tool integration",
+            "tools integration"
+        ],
+        category="Artificial Intelligence"
+    ),
+
+    "educational_data_analysis": SkillConcept(
+        skill_id="SKILL_025",
+        canonical_name="Educational Data Analysis",
+        aliases=[
+            "educational data analysis",
+            "education data analysis"
+        ],
+        category="Data Analysis"
+    ),
+
+    "personalized_output_generation": SkillConcept(
+        skill_id="SKILL_026",
+        canonical_name="Personalized Output Generation",
+        aliases=[
+            "personalized output generation",
+            "personalized outputs"
+        ],
+        category="Generative AI"
+    ),
+
 }
 
 
+
+
+
+
+
 def get_skill_concept(skill_name: str) -> Optional[SkillConcept]:
-    normalized_name = skill_name.strip().lower()
+    def get_skill_concept(
+            skill_name: str
+    ) -> Optional[SkillConcept]:
 
-    for concept in SKILL_ONTOLOGY.values():
+        normalized_name = normalize_skill_text(
+            skill_name
+        )
 
-        if normalized_name == concept.canonical_name.lower():
-            return concept
-
-        for alias in concept.aliases:
-            if normalized_name == alias.lower():
+        # 1. Exact matching
+        # ---------------------------------
+        for concept in SKILL_ONTOLOGY.values():
+            canonical_name = normalize_skill_text(
+                concept.canonical_name
+            )
+            if normalized_name == canonical_name:
                 return concept
+            for alias in concept.aliases:
+                normalized_alias = normalize_skill_text(
+                    alias
+                )
 
-    return None
+                if normalized_name == normalized_alias:
+                    return concept
+
+                # 2. Phrase matching
+
+            candidates = []
+            for concept in SKILL_ONTOLOGY.values():
+                candidates.append(
+                    (
+                        normalize_skill_text(
+                            concept.canonical_name
+                        ),
+                        concept
+                    )
+                )
+
+                for alias in concept.aliases:
+                    candidates.append(
+                        (
+                            normalize_skill_text(alias),
+                            concept
+                        )
+                    )
+                    candidates.sort(
+                        key=lambda item: len(item[0]),
+                        reverse=True
+                    )
+
+                    for phrase, concept in candidates:
+
+                        if not phrase:
+                            continue
+
+                        pattern = (
+                                r"(?<!\w)"
+                                + re.escape(phrase)
+                                + r"(?!\w)"
+                        )
+
+                        if re.search(
+                                pattern,
+                                normalized_name
+                        ):
+                            return concept
+
+                    return None
+
+
+
+
+
+
 
 
 def get_canonical_name(skill_name: str) -> str:
@@ -277,3 +526,47 @@ def get_skill_category(skill_name: str) -> Optional[str]:
         return None
 
     return concept.category
+
+
+
+
+
+
+def normalize_skill_text(text: str) -> str:
+    """
+    Normalize text before ontology matching.
+    """
+
+    if not text:
+        return ""
+
+    text = text.strip().lower()
+
+    prefixes = [
+        "high proficiency in",
+        "advanced proficiency in",
+        "professional proficiency in",
+        "proficient in",
+        "experience in",
+        "practical experience in",
+        "hands-on experience with",
+        "hands-on experience in",
+        "experience with",
+
+        "تسلط حرفه‌ای به",
+        "تسلط حرفه ای به",
+        "تسلط به",
+    ]
+
+    for prefix in prefixes:
+
+        if text.startswith(prefix):
+            text = text[len(prefix):].strip()
+
+    text = re.sub(
+        r"\s+",
+        " ",
+        text
+    )
+
+    return text

@@ -23,35 +23,49 @@ class OllamaSkillExtractor(SkillExtractor):
 You are a professional job-market skill extraction system.
 
 Your task is to analyze a real job posting and extract
-skills and competencies that are relevant to the job.
+technical skills and professional competencies.
 
 Rules:
 
 1. Extract technical skills, tools, technologies,
-   methodologies and relevant professional competencies.
+   frameworks, methodologies and relevant competencies.
 
-2. Ignore salary, benefits, company introduction,
-   location and unrelated information.
+2. Each skill should be as atomic as possible.
 
-3. Determine whether each skill is Required or Preferred.
+3. Do NOT combine multiple independent technologies
+   into one skill.
 
-4. If the job posting explicitly states a proficiency level,
+For example:
+
+"REST API, PostgreSQL, Git and Docker"
+
+must become:
+
+REST API
+PostgreSQL
+Git
+Docker
+
+4. Determine whether each skill is Required or Preferred.
+
+5. If a proficiency level is explicitly stated,
    preserve it.
 
-5. If no proficiency level is explicitly stated,
+6. If no proficiency level is explicitly stated,
    use "Not specified".
 
-6. Do not invent proficiency levels.
+7. Do not invent proficiency levels.
 
-7. Provide the exact or near-exact text from the job posting
-   as evidence.
+8. Provide evidence from the job description.
 
-8. Do not create duplicate skills.
+9. Do not extract salary, location, benefits,
+   company information or unrelated information.
 
-9. Return only skills that are useful for analyzing
-   labor-market requirements.
+10. Do not extract years of experience as a skill.
 
-10. Return the result according to the provided JSON schema.
+11. Return only useful skills for labor-market analysis.
+
+12. Return the result according to the provided JSON schema.
 """
 
         response = self.client.chat(
