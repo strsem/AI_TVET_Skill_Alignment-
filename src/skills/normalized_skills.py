@@ -79,17 +79,18 @@ def normalize_extracted_skills(
             if (
                 _IMPORTANCE_RANK.get(
                     candidate["importance"],
+                    0
                 )
-                    >
-                    _IMPORTANCE_RANK.get(
-                        existing["importance"],
-                        0
-                    )
+                >
+                _IMPORTANCE_RANK.get(
+                    existing["importance"],
+                    0
+                )
             ):
                 existing["importance"] = (
                     candidate["importance"]
                 )
 
-            return list(
-                normalized_by_canonical.values()
-            )
+    return list(
+        normalized_by_canonical.values()
+    )

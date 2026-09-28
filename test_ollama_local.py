@@ -4,30 +4,52 @@ from src.skills.normalized_skills import normalize_extracted_skills
 
 
 job_description = """
-We are looking for a Python developer with experience
-in Django, REST API, Git and SQL.
+We are looking for an AI Engineer who can design and develop
+AI-powered products and Agentic AI systems.
 
-Experience with FastAPI is a plus.
+Requirements:
 
-Knowledge of Docker and AWS is preferred.
+- High proficiency in Python.
+- Experience working with LLM APIs.
+- Experience developing applications based on LLMs.
+- Experience with RAG, Embeddings, and Vector Databases.
+- Familiarity with Function Calling and Tool Calling.
+- Understanding of Agent Memory, State Management,
+  and Agent Orchestration.
+- Experience designing and developing AI Agents
+  and Agentic Systems.
+- Deep knowledge of Prompt Engineering
+  and Context Engineering.
+- Familiarity with REST API, PostgreSQL, Git, Docker,
+  and Linux.
+- Familiarity with LangGraph, LangChain, MCP,
+  FastAPI, Redis, and n8n.
 """
 
 
 def main():
 
     print("=" * 70)
-    print("LOCAL OLLAMA SKILL EXTRACTION")
+    print("REALISTIC OLLAMA SKILL EXTRACTION TEST")
     print("=" * 70)
 
-    extractor = OllamaSkillExtractor(model="qwen3:4b")
+    extractor = OllamaSkillExtractor(
+        model="qwen3:4b"
+    )
 
     print("\nOllama is ready.")
+
+    # --------------------------------------------------
+    # 1. LLM EXTRACTION
+    # --------------------------------------------------
 
     result = extractor.extract(
         job_description
     )
 
-    print("\nRAW LLM RESULT")
+    print("\n")
+    print("=" * 70)
+    print("1. RAW LLM RESULT")
     print("=" * 70)
 
     for skill in result.skills:
@@ -52,9 +74,13 @@ def main():
             f"Evidence: {skill.evidence}"
         )
 
+    # --------------------------------------------------
+    # 2. SEGMENTATION
+    # --------------------------------------------------
+
     print("\n")
     print("=" * 70)
-    print("SEGMENTED SKILLS")
+    print("2. SEGMENTED SKILLS")
     print("=" * 70)
 
     segmented_skills = []
@@ -79,9 +105,13 @@ def main():
             f"  - {skill}"
         )
 
+    # --------------------------------------------------
+    # 3. NORMALIZATION
+    # --------------------------------------------------
+
     print("\n")
     print("=" * 70)
-    print("NORMALIZED SKILLS")
+    print("3. NORMALIZED SKILLS")
     print("=" * 70)
 
     normalized_result = normalize_extracted_skills(
@@ -91,8 +121,32 @@ def main():
     for skill in normalized_result:
 
         print(
-            f"\n{skill}"
+            skill
         )
+
+    # --------------------------------------------------
+    # 4. SUMMARY
+    # --------------------------------------------------
+
+    print("\n")
+    print("=" * 70)
+    print("4. SUMMARY")
+    print("=" * 70)
+
+    print(
+        f"LLM extracted: "
+        f"{len(result.skills)} skills"
+    )
+
+    print(
+        f"Segmented: "
+        f"{len(segmented_skills)} skills"
+    )
+
+    print(
+        f"Normalized: "
+        f"{len(normalized_result)} skills"
+    )
 
 
 if __name__ == "__main__":
