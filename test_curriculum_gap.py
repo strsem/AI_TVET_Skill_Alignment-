@@ -74,8 +74,7 @@ def test_curriculum_gap_analysis():
 
     assert high_gap_skills == {
         "AI Agents",
-        "RAG",
-        "LangGraph"
+        "RAG"
     }
 
     # -----------------------------------------
@@ -105,3 +104,52 @@ def test_curriculum_gap_analysis():
         "Git",
         "REST API"
     }
+
+    # -----------------------------------------
+    # NOT DIRECT GAP
+    # -----------------------------------------
+
+    not_direct_gap_skills = {
+        item["skill"]
+        for item in report["not_direct_gap"]
+    }
+
+    assert not_direct_gap_skills == {
+        "LangGraph"
+    }
+
+
+def test_framework_is_not_direct_gap():
+
+    report = analyze_curriculum_gap(
+        market_profile,
+        curriculum
+    )
+
+    langgraph = next(
+        item
+        for item in report["not_direct_gap"]
+        if item["skill"] == "LangGraph"
+    )
+
+    assert langgraph["skill_type"] == "FRAMEWORK"
+    assert langgraph["gap_level"] == "NOT DIRECT GAP"
+    assert langgraph["curriculum_covered"] is False
+
+
+def test_summary_counts():
+
+    report = analyze_curriculum_gap(
+        market_profile,
+        curriculum
+    )
+
+    assert report["summary"]["total_market_skills"] == 7
+    assert report["summary"]["total_curriculum_skills"] == 3
+
+    assert report["summary"]["high_gap_count"] == 2
+    assert report["summary"]["medium_gap_count"] == 1
+    assert report["summary"]["covered_count"] == 3
+    assert report["summary"]["not_direct_gap_count"] == 1
+
+    assert report["unknown_curriculum_skills"] == []
