@@ -1,0 +1,325 @@
+{
+  "summary": {
+    "total_market_skills": 34,
+    "total_curriculum_skills": 3,
+    "high_gap_count": 5,
+    "medium_gap_count": 17,
+    "covered_count": 3,
+    "not_direct_gap_count": 9
+  },
+  "high_gap": [
+    {
+      "skill": "Vector Database",
+      "skill_type": "SKILL",
+      "job_count": 2,
+      "total_jobs": 3,
+      "market_demand": 66.67,
+      "curriculum_covered": false,
+      "gap_level": "HIGH GAP"
+    },
+    {
+      "skill": "AI Agents",
+      "skill_type": "SKILL",
+      "job_count": 2,
+      "total_jobs": 3,
+      "market_demand": 66.67,
+      "curriculum_covered": false,
+      "gap_level": "HIGH GAP"
+    },
+    {
+      "skill": "RAG",
+      "skill_type": "SKILL",
+      "job_count": 2,
+      "total_jobs": 3,
+      "market_demand": 66.67,
+      "curriculum_covered": false,
+      "gap_level": "HIGH GAP"
+    },
+    {
+      "skill": "Prompt Engineering",
+      "skill_type": "SKILL",
+      "job_count": 2,
+      "total_jobs": 3,
+      "market_demand": 66.67,
+      "curriculum_covered": false,
+      "gap_level": "HIGH GAP"
+    },
+    {
+      "skill": "LLM",
+      "skill_type": "SKILL",
+      "job_count": 2,
+      "total_jobs": 3,
+      "market_demand": 66.67,
+      "curriculum_covered": false,
+      "gap_level": "HIGH GAP"
+    }
+  ],
+  "medium_gap": [
+    {
+      "skill": "Cloud Infrastructure",
+      "skill_type": "SKILL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "Agent Memory",
+      "skill_type": "SKILL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "FastAPI",
+      "skill_type": "SKILL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "Embeddings",
+      "skill_type": "SKILL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "OpenAI Agents SDK",
+      "skill_type": "SKILL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "Docker",
+      "skill_type": "TOOL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "MCP",
+      "skill_type": "SKILL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "Context Engineering",
+      "skill_type": "SKILL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "Tool Calling",
+      "skill_type": "SKILL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "n8n",
+      "skill_type": "SKILL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "Agent Orchestration",
+      "skill_type": "SKILL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "State Management",
+      "skill_type": "SKILL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "Observability Tools",
+      "skill_type": "SKILL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "Function Calling",
+      "skill_type": "SKILL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "PostgreSQL",
+      "skill_type": "TOOL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "Redis",
+      "skill_type": "SKILL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    },
+    {
+      "skill": "Linux",
+      "skill_type": "SKILL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "MEDIUM GAP"
+    }
+  ],
+  "covered": [
+    {
+      "skill": "Python",
+      "skill_type": "SKILL",
+      "job_count": 2,
+      "total_jobs": 3,
+      "market_demand": 66.67,
+      "curriculum_covered": true,
+      "gap_level": "COVERED"
+    },
+    {
+      "skill": "Git",
+      "skill_type": "TOOL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": true,
+      "gap_level": "COVERED"
+    },
+    {
+      "skill": "REST API",
+      "skill_type": "TOOL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": true,
+      "gap_level": "COVERED"
+    }
+  ],
+  "not_direct_gap": [
+    {
+      "skill": "LangGraph",
+      "skill_type": "FRAMEWORK",
+      "job_count": 2,
+      "total_jobs": 3,
+      "market_demand": 66.67,
+      "curriculum_covered": false,
+      "gap_level": "NOT DIRECT GAP"
+    },
+    {
+      "skill": "LangChain",
+      "skill_type": "FRAMEWORK",
+      "job_count": 2,
+      "total_jobs": 3,
+      "market_demand": 66.67,
+      "curriculum_covered": false,
+      "gap_level": "NOT DIRECT GAP"
+    },
+    {
+      "skill": "Whisper",
+      "skill_type": "MODEL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "NOT DIRECT GAP"
+    },
+    {
+      "skill": "Gemma",
+      "skill_type": "MODEL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "NOT DIRECT GAP"
+    },
+    {
+      "skill": "LlamaIndex",
+      "skill_type": "FRAMEWORK",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "NOT DIRECT GAP"
+    },
+    {
+      "skill": "Llama",
+      "skill_type": "MODEL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "NOT DIRECT GAP"
+    },
+    {
+      "skill": "GPT-OSS",
+      "skill_type": "MODEL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "NOT DIRECT GAP"
+    },
+    {
+      "skill": "Qwen",
+      "skill_type": "MODEL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "NOT DIRECT GAP"
+    },
+    {
+      "skill": "Mistral",
+      "skill_type": "MODEL",
+      "job_count": 1,
+      "total_jobs": 3,
+      "market_demand": 33.33,
+      "curriculum_covered": false,
+      "gap_level": "NOT DIRECT GAP"
+    }
+  ],
+  "unknown_curriculum_skills": []
+}
