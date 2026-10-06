@@ -1,0 +1,603 @@
+{
+  "recommendations": [
+    {
+      "skill": "Prompt Engineering",
+      "gap_level": "HIGH",
+      "coverage": null,
+      "job_count": 2,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "Prompt Engineering and LLM Applications",
+      "recommended_topics": [
+        "Prompt Engineering",
+        "Prompt Design",
+        "Prompt Evaluation",
+        "LLM Application Patterns"
+      ],
+      "reason": "Prompt Engineering has high market demand and should be explicitly covered."
+    },
+    {
+      "skill": "AI Agents",
+      "gap_level": "HIGH",
+      "coverage": null,
+      "job_count": 2,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "Agentic AI Development",
+      "recommended_topics": [
+        "AI Agents",
+        "Agent Orchestration",
+        "Agent Memory and State",
+        "Tool Calling"
+      ],
+      "reason": "AI Agents is a high market gap and should become a dedicated curriculum area."
+    },
+    {
+      "skill": "RAG",
+      "gap_level": "HIGH",
+      "coverage": null,
+      "job_count": 2,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "Retrieval-Augmented Generation",
+      "recommended_topics": [
+        "RAG",
+        "Embeddings",
+        "Retrieval Pipelines",
+        "RAG Evaluation"
+      ],
+      "reason": "RAG appears frequently in the market profile and requires dedicated practical training."
+    },
+    {
+      "skill": "LLM",
+      "gap_level": "HIGH",
+      "coverage": null,
+      "job_count": 2,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "Large Language Models and LLM Applications",
+      "recommended_topics": [
+        "LLM Fundamentals",
+        "LLM APIs",
+        "LLM Application Development",
+        "LLM Evaluation"
+      ],
+      "reason": "LLM is a high market gap and represents a foundational skill for modern AI applications."
+    },
+    {
+      "skill": "Vector Database",
+      "gap_level": "HIGH",
+      "coverage": null,
+      "job_count": 2,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "Vector Databases and Semantic Search",
+      "recommended_topics": [
+        "Vector Databases",
+        "Embeddings",
+        "Similarity Search",
+        "Semantic Search"
+      ],
+      "reason": "Vector Database is a high market gap and is a core component of modern RAG systems."
+    },
+    {
+      "skill": "State Management",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "Agentic AI Development",
+      "recommended_topics": [
+        "Agent State",
+        "State Management",
+        "Conversation State"
+      ],
+      "reason": "State Management supports reliable multi-step agent systems."
+    },
+    {
+      "skill": "Cloud Infrastructure",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "AI Infrastructure and Cloud Deployment",
+      "recommended_topics": [
+        "Cloud Infrastructure",
+        "AI Deployment",
+        "Cloud AI Services"
+      ],
+      "reason": "Cloud infrastructure is required for deploying AI systems beyond local development."
+    },
+    {
+      "skill": "FastAPI",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "AI Backend and API Development",
+      "recommended_topics": [
+        "FastAPI",
+        "REST APIs",
+        "AI Model APIs",
+        "API Deployment"
+      ],
+      "reason": "FastAPI is a common bridge between AI models and production applications."
+    },
+    {
+      "skill": "OpenAI Agents SDK",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "Agentic AI Development",
+      "recommended_topics": [
+        "Agents SDK",
+        "Agent Tools",
+        "Agent Workflows"
+      ],
+      "reason": "Agent SDKs provide practical implementation patterns for agentic systems."
+    },
+    {
+      "skill": "n8n",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "AI Workflow Automation",
+      "recommended_topics": [
+        "Workflow Automation",
+        "n8n",
+        "AI Workflow Integration"
+      ],
+      "reason": "Workflow automation connects AI capabilities to practical business processes."
+    },
+    {
+      "skill": "Function Calling",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "Agentic AI Development",
+      "recommended_topics": [
+        "Function Calling",
+        "Tool Calling",
+        "Structured Outputs"
+      ],
+      "reason": "Function calling is a core mechanism for connecting LLMs with external tools."
+    },
+    {
+      "skill": "Docker",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "TOOL",
+      "curriculum_area": "AI Deployment and DevOps",
+      "recommended_topics": [
+        "Docker",
+        "Containerization",
+        "AI Service Deployment"
+      ],
+      "reason": "Containerization supports reproducible deployment of AI applications."
+    },
+    {
+      "skill": "Agent Orchestration",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "Agentic AI Development",
+      "recommended_topics": [
+        "Agent Orchestration",
+        "Multi-step Agents",
+        "Agent Workflows"
+      ],
+      "reason": "Agent orchestration is important for coordinating complex AI workflows."
+    },
+    {
+      "skill": "PostgreSQL",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "TOOL",
+      "curriculum_area": "AI Data Infrastructure",
+      "recommended_topics": [
+        "PostgreSQL",
+        "AI Data Storage",
+        "Structured Data for AI"
+      ],
+      "reason": "Production AI applications require reliable structured data storage."
+    },
+    {
+      "skill": "MCP",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "Agentic AI Development",
+      "recommended_topics": [
+        "Model Context Protocol",
+        "Tool Integration",
+        "AI Tool Ecosystems"
+      ],
+      "reason": "MCP provides a standardized approach to connecting AI systems with tools and resources."
+    },
+    {
+      "skill": "Context Engineering",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "LLM Application Engineering",
+      "recommended_topics": [
+        "Context Engineering",
+        "Context Management",
+        "Long-context Applications"
+      ],
+      "reason": "Effective context management is increasingly important in complex LLM applications."
+    },
+    {
+      "skill": "Agent Memory",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "Agentic AI Development",
+      "recommended_topics": [
+        "Agent Memory",
+        "Short-term Memory",
+        "Long-term Memory"
+      ],
+      "reason": "Memory is an important component of persistent and stateful AI agents."
+    },
+    {
+      "skill": "Linux",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "AI Infrastructure and Deployment",
+      "recommended_topics": [
+        "Linux",
+        "Linux for AI Applications",
+        "Server Administration Basics"
+      ],
+      "reason": "Linux is a common foundation for deploying and operating AI systems."
+    },
+    {
+      "skill": "Observability Tools",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "AI Observability and Evaluation",
+      "recommended_topics": [
+        "AI Observability",
+        "Logging",
+        "Monitoring",
+        "LLM Evaluation"
+      ],
+      "reason": "Observability is necessary for monitoring and debugging AI systems in production."
+    },
+    {
+      "skill": "Redis",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "AI Data Infrastructure",
+      "recommended_topics": [
+        "Redis",
+        "Caching",
+        "Session State"
+      ],
+      "reason": "Redis can support fast state, caching, and session management in AI applications."
+    },
+    {
+      "skill": "Tool Calling",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "Agentic AI Development",
+      "recommended_topics": [
+        "Tool Calling",
+        "Tool Integration",
+        "External API Integration"
+      ],
+      "reason": "Tool calling is fundamental to practical agentic AI systems."
+    },
+    {
+      "skill": "Embeddings",
+      "gap_level": "MEDIUM",
+      "coverage": null,
+      "job_count": 1,
+      "total_jobs": 3,
+      "skill_type": "SKILL",
+      "curriculum_area": "RAG and Vector Search",
+      "recommended_topics": [
+        "Embeddings",
+        "Embedding Models",
+        "Similarity Search",
+        "Vector Search"
+      ],
+      "reason": "Embeddings provide the representation layer for semantic retrieval and RAG."
+    }
+  ],
+  "curriculum_areas": [
+    {
+      "curriculum_area": "Prompt Engineering and LLM Applications",
+      "priority": "HIGH",
+      "skills": [
+        "Prompt Engineering"
+      ],
+      "recommended_topics": [
+        "Prompt Engineering",
+        "Prompt Design",
+        "Prompt Evaluation",
+        "LLM Application Patterns"
+      ],
+      "reasons": [
+        "Prompt Engineering has high market demand and should be explicitly covered."
+      ]
+    },
+    {
+      "curriculum_area": "Agentic AI Development",
+      "priority": "HIGH",
+      "skills": [
+        "AI Agents",
+        "State Management",
+        "OpenAI Agents SDK",
+        "Function Calling",
+        "Agent Orchestration",
+        "MCP",
+        "Agent Memory",
+        "Tool Calling"
+      ],
+      "recommended_topics": [
+        "AI Agents",
+        "Agent Orchestration",
+        "Agent Memory and State",
+        "Tool Calling",
+        "Agent State",
+        "State Management",
+        "Conversation State",
+        "Agents SDK",
+        "Agent Tools",
+        "Agent Workflows",
+        "Function Calling",
+        "Structured Outputs",
+        "Multi-step Agents",
+        "Model Context Protocol",
+        "Tool Integration",
+        "AI Tool Ecosystems",
+        "Agent Memory",
+        "Short-term Memory",
+        "Long-term Memory",
+        "External API Integration"
+      ],
+      "reasons": [
+        "AI Agents is a high market gap and should become a dedicated curriculum area.",
+        "State Management supports reliable multi-step agent systems.",
+        "Agent SDKs provide practical implementation patterns for agentic systems.",
+        "Function calling is a core mechanism for connecting LLMs with external tools.",
+        "Agent orchestration is important for coordinating complex AI workflows.",
+        "MCP provides a standardized approach to connecting AI systems with tools and resources.",
+        "Memory is an important component of persistent and stateful AI agents.",
+        "Tool calling is fundamental to practical agentic AI systems."
+      ]
+    },
+    {
+      "curriculum_area": "Retrieval-Augmented Generation",
+      "priority": "HIGH",
+      "skills": [
+        "RAG"
+      ],
+      "recommended_topics": [
+        "RAG",
+        "Embeddings",
+        "Retrieval Pipelines",
+        "RAG Evaluation"
+      ],
+      "reasons": [
+        "RAG appears frequently in the market profile and requires dedicated practical training."
+      ]
+    },
+    {
+      "curriculum_area": "Large Language Models and LLM Applications",
+      "priority": "HIGH",
+      "skills": [
+        "LLM"
+      ],
+      "recommended_topics": [
+        "LLM Fundamentals",
+        "LLM APIs",
+        "LLM Application Development",
+        "LLM Evaluation"
+      ],
+      "reasons": [
+        "LLM is a high market gap and represents a foundational skill for modern AI applications."
+      ]
+    },
+    {
+      "curriculum_area": "Vector Databases and Semantic Search",
+      "priority": "HIGH",
+      "skills": [
+        "Vector Database"
+      ],
+      "recommended_topics": [
+        "Vector Databases",
+        "Embeddings",
+        "Similarity Search",
+        "Semantic Search"
+      ],
+      "reasons": [
+        "Vector Database is a high market gap and is a core component of modern RAG systems."
+      ]
+    },
+    {
+      "curriculum_area": "AI Infrastructure and Cloud Deployment",
+      "priority": "MEDIUM",
+      "skills": [
+        "Cloud Infrastructure"
+      ],
+      "recommended_topics": [
+        "Cloud Infrastructure",
+        "AI Deployment",
+        "Cloud AI Services"
+      ],
+      "reasons": [
+        "Cloud infrastructure is required for deploying AI systems beyond local development."
+      ]
+    },
+    {
+      "curriculum_area": "AI Backend and API Development",
+      "priority": "MEDIUM",
+      "skills": [
+        "FastAPI"
+      ],
+      "recommended_topics": [
+        "FastAPI",
+        "REST APIs",
+        "AI Model APIs",
+        "API Deployment"
+      ],
+      "reasons": [
+        "FastAPI is a common bridge between AI models and production applications."
+      ]
+    },
+    {
+      "curriculum_area": "AI Workflow Automation",
+      "priority": "MEDIUM",
+      "skills": [
+        "n8n"
+      ],
+      "recommended_topics": [
+        "Workflow Automation",
+        "n8n",
+        "AI Workflow Integration"
+      ],
+      "reasons": [
+        "Workflow automation connects AI capabilities to practical business processes."
+      ]
+    },
+    {
+      "curriculum_area": "AI Deployment and DevOps",
+      "priority": "MEDIUM",
+      "skills": [
+        "Docker"
+      ],
+      "recommended_topics": [
+        "Docker",
+        "Containerization",
+        "AI Service Deployment"
+      ],
+      "reasons": [
+        "Containerization supports reproducible deployment of AI applications."
+      ]
+    },
+    {
+      "curriculum_area": "AI Data Infrastructure",
+      "priority": "MEDIUM",
+      "skills": [
+        "PostgreSQL",
+        "Redis"
+      ],
+      "recommended_topics": [
+        "PostgreSQL",
+        "AI Data Storage",
+        "Structured Data for AI",
+        "Redis",
+        "Caching",
+        "Session State"
+      ],
+      "reasons": [
+        "Production AI applications require reliable structured data storage.",
+        "Redis can support fast state, caching, and session management in AI applications."
+      ]
+    },
+    {
+      "curriculum_area": "LLM Application Engineering",
+      "priority": "MEDIUM",
+      "skills": [
+        "Context Engineering"
+      ],
+      "recommended_topics": [
+        "Context Engineering",
+        "Context Management",
+        "Long-context Applications"
+      ],
+      "reasons": [
+        "Effective context management is increasingly important in complex LLM applications."
+      ]
+    },
+    {
+      "curriculum_area": "AI Infrastructure and Deployment",
+      "priority": "MEDIUM",
+      "skills": [
+        "Linux"
+      ],
+      "recommended_topics": [
+        "Linux",
+        "Linux for AI Applications",
+        "Server Administration Basics"
+      ],
+      "reasons": [
+        "Linux is a common foundation for deploying and operating AI systems."
+      ]
+    },
+    {
+      "curriculum_area": "AI Observability and Evaluation",
+      "priority": "MEDIUM",
+      "skills": [
+        "Observability Tools"
+      ],
+      "recommended_topics": [
+        "AI Observability",
+        "Logging",
+        "Monitoring",
+        "LLM Evaluation"
+      ],
+      "reasons": [
+        "Observability is necessary for monitoring and debugging AI systems in production."
+      ]
+    },
+    {
+      "curriculum_area": "RAG and Vector Search",
+      "priority": "MEDIUM",
+      "skills": [
+        "Embeddings"
+      ],
+      "recommended_topics": [
+        "Embeddings",
+        "Embedding Models",
+        "Similarity Search",
+        "Vector Search"
+      ],
+      "reasons": [
+        "Embeddings provide the representation layer for semantic retrieval and RAG."
+      ]
+    }
+  ],
+  "unmapped_gaps": [],
+  "summary": {
+    "recommended_skills": 22,
+    "curriculum_areas": 14,
+    "unmapped_gaps": 0
+  }
+}
