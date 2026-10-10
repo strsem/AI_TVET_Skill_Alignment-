@@ -169,7 +169,7 @@ def test_linux_and_docker_are_not_self_prerequisites():
                     "Docker",
                     "Linux"
                 ],
-                "recommended_topics": [],
+                "recommended_topic  s": [],
                 "reasons": []
             }
         ]
@@ -185,7 +185,7 @@ def test_linux_and_docker_are_not_self_prerequisites():
 
     assert (
         area["prerequisite_skills"]
-        == []
+        == ["Git"]
     )
 
 

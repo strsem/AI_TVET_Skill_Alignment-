@@ -90,7 +90,8 @@ AREA_PREREQUISITE_SKILLS = {
         "REST API"
     ],
 
-    "AI Infrastructure, Deployment and Cloud": [],
+
+    "AI Infrastructure, Deployment and Cloud": ["Git"],
 
     "AI Observability and Evaluation": []
 }
